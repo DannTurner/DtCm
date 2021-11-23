@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <table>
+                { % for player in table % }
+                <tr>
+                        <td>
+                                {{ player }}
+                        </td>
+                </tr>
+        </table>
+{% endblock %}
