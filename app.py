@@ -4,8 +4,6 @@ from flask import (
     render_template,
 )  # Case sensitive imports the Flask class from the flask library
 
-from classes.py
-
 app = Flask(__name__)
 
 @app.get("/")  # HTTP Request: Get /

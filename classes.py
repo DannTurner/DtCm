@@ -8,10 +8,7 @@ class Match:
 
 
 class Player:
-    def __init__(player, name, studentNo, email, phoneNumber, team, notes):
+    def __init__(player, name, team, notes):
         player.name = name
-        player.studentNo = studentNo
-        player.email = email
-        player.phoneNumber = phoneNumber
         player.team = team
         player.notes = notes
