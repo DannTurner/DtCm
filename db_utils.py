@@ -15,7 +15,7 @@ SQL_orderedLeague = "select * from player order by LeaguePoints desc"
 def leagueTable():
     with DBcm.UseDatabase(config) as db:
         try:
-            db.execut(SQL_orderedLeague)
+            db.execute(SQL_orderedLeague)
             data = db.fetchall()
         except DBcm.SQLError as err:
             print("Your query broke:", str(err))

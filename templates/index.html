@@ -2,11 +2,12 @@
 
 {% block body %}
         <table>
-                { % for player in table % }
+                {% for player in table %}
                 <tr>
                         <td>
                                 {{ player }}
                         </td>
                 </tr>
+                {% endfor %}
         </table>
 {% endblock %}
