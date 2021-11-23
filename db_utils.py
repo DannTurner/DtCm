@@ -8,7 +8,7 @@ config = {
 }
 
 SQL_unplayedMatches = "select * from matchdetails where status = 'Not Played'"
-SQL_appendMatch = "update matchdetails where MatchID = '%s' set Winner = '%s'"
+SQL_appendMatch = "update matchdetails set Winner = %s, status ='Played' where MatchID = %s"
 SQL_createPLayer = "insert into players "
 SQL_orderedLeague = "select * from player order by LeaguePoints desc"
 
@@ -35,12 +35,12 @@ def unplayedMatches():
     unplayed = data
     return unplayed
 
-def appendMatch(mId, winner):
+def appendMatch(winner, mId):
     with DBcm.UseDatabase(config) as db:
         try:
             db.execute(SQL_appendMatch,(
-                mId,
                 winner,
+                mId,
                 )
             )
         except DBcm.SQLError as err:
