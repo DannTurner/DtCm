@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 
 {% block body %}
-        <table>
-                <tr>
-                        <td>Rank</td>
-                        <td>Name</td>
-                        <td>Points</td>
-                        <td>Wins</td>
-                        <td>Losses</td>
-                        <td>Draws</td>
-                </tr>
-                {% for row in table %}
-                <tr>
-                        <td>{{ loop.index }}</td>
-                        <td>{{ row[1] }}</td>
-                        <td>{{ row[2] }}</td>
-                        <td>{{ row[3] }}</td>
-                        <td>{{ row[4] }}</td>
-                        <td>{{ row[5] }}</td>
-                </tr>
-                {% endfor %}
-        </table>
+        <center>
+                <table>
+                        <tr>
+                                <td>Rank</td>
+                                <td>Name</td>
+                                <td>Points</td>
+                                <td>Wins</td>
+                                <td>Losses</td>
+                                <td>Draws</td>
+                        </tr>
+                        {% for row in table %}
+                        <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                                <td>{{ row[3] }}</td>
+                                <td>{{ row[4] }}</td>
+                                <td>{{ row[5] }}</td>
+                        </tr>
+                        {% endfor %}
+                </table>
+        </center>
 {% endblock %}

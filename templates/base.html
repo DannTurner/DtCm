@@ -2,10 +2,13 @@
 <html>
     <head>
         <title>{{ title }}</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
     </head>
 
     <body>
-        <h2>{{ heading }}</h2>
+        <center>
+            <h2>{{ heading }}</h2>
+        </center>
         
         {% block body %}
         {% endblock %}
