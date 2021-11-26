@@ -1,8 +1,8 @@
 import DBcm
 
 config = {
-    "host": "127.0.0.1",
-    "database": "leagueTracker2",
+    "host": "redtosh.ddns.net",
+    "database": "leagueTracker",
     "user": "leagueAdmin",
     "password": "trackerPass",
 }
