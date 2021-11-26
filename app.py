@@ -4,12 +4,12 @@ from flask import (
     Flask,
     request,
     render_template,
-)  # Case sensitive imports the Flask class from the flask library
+)
 
 app = Flask(__name__)
 
 
-@app.get("/")  # HTTP Request: Get /
+@app.get("/")
 def index():
     return render_template(
         "index.html",
