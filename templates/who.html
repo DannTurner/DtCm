@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
         {% block body %}
-
+                <center>
+                        <div class="col-sm-8 text text-center">
+                        {% for r in results %}
+                                <h3> {{ r }}</h3>
+                        {% endfor %}
+                        </div>
+                </center>
         {% endblock %}

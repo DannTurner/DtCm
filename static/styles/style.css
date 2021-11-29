@@ -15,6 +15,12 @@ h2 {
   color: rgb(248, 248, 248);
 }
 
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(248, 248, 248);
+}
+
 table {
   width: 750px;
   border-collapse: collapse;
@@ -38,6 +44,19 @@ th {
   border: 1px solid #ccc;
   text-align: left;
   font-size: 18px;
+}
+
+select,
+.button {
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+p {
+  text-align: left;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

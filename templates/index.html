@@ -6,7 +6,19 @@
         <div class="container-fluid text-center">    
                 <div class="row content">
                   <div class="col-sm-2 sidenav">
-
+                          <p>Wondering who you still have to play??</p> 
+                          <p>Pick your name below and press Go!</p>
+                        <form action="/notplayed" method="post">
+                                <select name="option">
+                                        {% for o in option_list %}
+                                            <option value="{{ o }}" SELECTED>{{ o }}</option>
+                                        {% endfor %}
+                                        </select>
+                                        </td>
+                                        <td>
+                                            <input class="button" type="submit" value="Go!">
+                                        </td>
+                        </form>
                   </div>
 
 
