@@ -8,8 +8,9 @@ config = {
 }
 
 SQL_unplayedMatches = "select * from matchdetails where status = 'Not Played'"
+SQL_unplayedMatchesFiltered = "select * from matchdetails where (Status = 'Not Played' and Player1 = %s) or (Status = 'Not Played' and Player2 = %s)"
 SQL_appendMatch = (
-    "update matchdetails set Winner = %s, status ='Played' where MatchID = %s"
+    "update matchdetails set Winner = %s, Status ='Played' where MatchID = %s"
 )
 SQL_createPLayer = "insert into players "
 SQL_orderedLeague = "select * from player order by LeaguePoints desc"
@@ -34,8 +35,25 @@ def unplayedMatches():
         except DBcm.SQLError as err:
             print("Your query broke:", str(err))
 
-    unplayed = data
-    return unplayed
+    return data
+
+
+def unplayedMatchesFiltered():
+    with DBcm.UseDatabase(config) as db:
+        try:
+            db.execute(SQL_unplayedMatchesFiltered)
+            data = db.fetchall()
+        except DBcm.SQLError as err:
+            print("Your query broke:", str(err))
+
+    playerList = []
+    for g in data:
+        if g[1] == "Ciaran Maye":
+            playerList.append(g[2])
+        else:
+            playerList.append(g[1])
+
+    return playerList
 
 
 def appendMatch(winner, mId):

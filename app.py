@@ -14,7 +14,17 @@ def index():
     return render_template(
         "index.html",
         title="League Standings",
-        heading="Welcome to the ITC Pool League!",
+        heading="ITC Pool League Standings",
+        table=leagueTable(),
+    )
+
+
+@app.get("/notplayed")
+def notplayed():
+    return render_template(
+        "who.html",
+        title="League Standings",
+        heading="ITC Pool League Standings",
         table=leagueTable(),
     )
 
