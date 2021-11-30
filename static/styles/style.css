@@ -70,6 +70,18 @@ p {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
-    font-size: 30px;
+    font-size: 40px;
+  }
+  select,
+  .button {
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: xx-large;
+  }
+  p {
+    text-align: left;
+    color: #ccc;
+    font-size: 34px;
+    font-weight: bold;
   }
 }
